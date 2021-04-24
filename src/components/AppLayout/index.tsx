@@ -6,7 +6,7 @@ const { Header, Content } = Layout;
 
 export const AppLayout: FunctionComponent = ({ children }) => (
   <Layout>
-    <Header className={styles.header}>GitHuboInator</Header>
+    <Header className={styles.header}>GitHub-o-Inator</Header>
     <Content className={styles.content}>{children}</Content>
   </Layout>
 );
