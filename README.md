@@ -1,3 +1,3 @@
-# GithuboInator
+# GitHub-o-Inator
 
 brrrr
