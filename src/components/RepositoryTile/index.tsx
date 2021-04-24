@@ -1,8 +1,7 @@
 import { EyeOutlined, ForkOutlined, StarOutlined } from "@ant-design/icons";
-import { Card, Space } from "antd";
+import { Button, Card, Space } from "antd";
 import React, { FunctionComponent } from "react";
 import { Repository } from "../../Repository";
-import styles from "./styles.module.scss";
 
 type RepositoryTileProps = {
   repo: Repository;
@@ -11,19 +10,26 @@ type RepositoryTileProps = {
 export const RepositoryTile: FunctionComponent<RepositoryTileProps> = ({
   repo,
 }) => (
-  <div className={styles.wrapper}>
-    <Card size="small" hoverable title={repo.name} style={{ maxWidth: 300 }}>
-      <Space>
-        <div>
-          <EyeOutlined /> {repo.watchers}
-        </div>
-        <div>
-          <StarOutlined /> {repo.stars}
-        </div>
-        <div>
-          <ForkOutlined /> {repo.forks}
-        </div>
-      </Space>
-    </Card>
-  </div>
+  <Card
+    hoverable
+    title={repo.name}
+    style={{ width: 500 }}
+    actions={[
+      <a target="_blank" href={repo.url} rel="noreferrer">
+        <Button>Visit</Button>
+      </a>,
+    ]}
+  >
+    <Space>
+      <div>
+        <EyeOutlined /> {repo.watchers}
+      </div>
+      <div>
+        <StarOutlined /> {repo.stars}
+      </div>
+      <div>
+        <ForkOutlined /> {repo.forks}
+      </div>
+    </Space>
+  </Card>
 );
