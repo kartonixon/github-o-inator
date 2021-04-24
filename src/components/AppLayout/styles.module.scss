@@ -1,0 +1,17 @@
+@import "/src/styles/globals.scss";
+
+body {
+  background-color: $ant-bg;
+  text-align: center;
+}
+
+.header {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: $allegro;
+}
+
+.content {
+  padding: 16px;
+}
