@@ -19,7 +19,7 @@ type RepositoryResponse = {
 export const fetchRepositories = async (
   username: string
 ): Promise<Repository[]> => {
-  const url = `https://api.github.com/users/${username}/repos`;
+  const url = `https://api.github.com/users/${username}/repos?sort=updated`;
 
   const response = await fetch(url, {
     method: "GET",
